@@ -1,0 +1,70 @@
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth}
+body{font-family:Arial,Helvetica,sans-serif;background:#f4f7fb;color:#172033;line-height:1.6}
+header{background:linear-gradient(135deg,#071a32,#1261a0);color:#fff;padding:18px 7%;position:sticky;top:0;z-index:20;box-shadow:0 3px 12px #0003}
+.nav{display:flex;align-items:center;justify-content:space-between;gap:20px}
+.logo{font-size:24px;font-weight:800}.logo span{color:#ffd23f}
+nav a{color:#fff;text-decoration:none;margin-left:15px;font-weight:700;font-size:14px}
+.hero{min-height:500px;display:flex;align-items:center;padding:75px 8%;color:#fff;background:linear-gradient(90deg,#071a32e8,#0b477fba),url('inauguracion_1.png') center 38%/cover}
+.hero div{max-width:760px}.tag{display:inline-block;background:#ffd23f;color:#172033;padding:7px 14px;border-radius:20px;font-weight:800;margin-bottom:18px}
+h1{font-size:clamp(40px,7vw,70px);line-height:1.04;margin-bottom:18px}.hero p{font-size:20px;max-width:700px}
+.btn{display:inline-block;margin-top:25px;padding:12px 22px;background:#ffd23f;color:#172033;border-radius:8px;text-decoration:none;font-weight:800}
+section{padding:65px 8%;max-width:1250px;margin:auto}.title{text-align:center;margin-bottom:38px}.title h2{font-size:34px;color:#0b3762}.title p{color:#64748b}
+.cards{display:grid;grid-template-columns:repeat(auto-fit,minmax(230px,1fr));gap:22px}
+.card{background:#fff;border-radius:14px;padding:25px;box-shadow:0 5px 18px #17324d14;border:1px solid #e5eaf0}.card .icon{font-size:38px;margin-bottom:10px}.card h3{margin-bottom:8px;color:#0b477f}
+.feature{display:grid;grid-template-columns:1.15fr .85fr;gap:28px;align-items:center;background:#fff;padding:22px;border-radius:18px;box-shadow:0 6px 22px #17324d16}
+.feature img{width:100%;height:430px;object-fit:cover;border-radius:13px}
+.feature h3{font-size:30px;color:#0b477f;margin-bottom:12px}
+.video-box{background:#071a32;border-radius:18px;padding:16px;box-shadow:0 6px 22px #17324d22}
+.video-box video{width:100%;display:block;border-radius:12px;max-height:560px;background:#000}
+.caption{color:#fff;text-align:center;padding:12px 5px 2px}
+.timeline{border-left:4px solid #1261a0;padding-left:24px}.event{background:#fff;margin-bottom:20px;padding:20px;border-radius:12px;box-shadow:0 4px 15px #0000000d}.event strong{color:#1261a0}
+.gallery{display:grid;grid-template-columns:repeat(auto-fit,minmax(250px,1fr));gap:18px}.gallery figure{margin:0;background:#fff;border-radius:13px;overflow:hidden;box-shadow:0 5px 15px #0002}.gallery img{width:100%;height:270px;object-fit:cover;display:block}.gallery figcaption{padding:10px 12px;font-size:13px;color:#475569;font-weight:600}
+.calendar{width:100%;border-collapse:collapse;background:#fff;border-radius:12px;overflow:hidden;box-shadow:0 4px 16px #0001}.calendar th,.calendar td{padding:14px;text-align:left;border-bottom:1px solid #e9eef3}.calendar th{background:#0b477f;color:#fff}
+.highlight{background:#0b1f3a;color:#fff;border-radius:18px;padding:38px;display:grid;grid-template-columns:1fr 1fr;gap:30px;align-items:center}.highlight h2{font-size:35px;margin-bottom:12px}
+.team{text-align:center;background:#eaf3fb;border-radius:16px;padding:35px}footer{background:#071a32;color:#fff;text-align:center;padding:35px 8%}footer strong{color:#ffd23f}
+/* Resultados / llaves */
+.bracket-wrap{display:grid;grid-template-columns:1fr 1fr;gap:26px}
+.bcol{background:#fff;border-radius:16px;padding:26px;box-shadow:0 6px 22px #17324d16;border-top:6px solid #1261a0}
+.bcol.women{border-top-color:#e0459a}
+.bcol h3{color:#0b477f;font-size:23px;margin-bottom:6px}.bcol.women h3{color:#c62f81}
+.bcol .sub{color:#64748b;font-size:14px;margin-bottom:18px}
+.match{border:1px solid #e5eaf0;border-radius:10px;padding:12px 14px;margin-bottom:12px;background:#f8fbff}
+.match .lbl{font-size:12px;font-weight:800;letter-spacing:.5px;color:#1261a0;text-transform:uppercase;margin-bottom:8px}
+.bcol.women .match .lbl{color:#c62f81}
+.row{display:flex;justify-content:space-between;align-items:center;padding:6px 0;font-weight:700}
+.row.win{color:#0b7a3b}.row.win::after{content:'✅';margin-left:8px}
+.row.lose{color:#94a3b8}
+.vs{text-align:center;color:#cbd5e1;font-weight:800;font-size:12px;margin:2px 0}
+.final{background:linear-gradient(135deg,#fff8e1,#fff);border:2px dashed #ffd23f}
+.final .lbl{color:#b7791f}
+.bcol.women .final{background:linear-gradient(135deg,#fff0f7,#fff);border-color:#e0459a}.bcol.women .final .lbl{color:#c62f81}
+.pending{color:#e07b00;font-weight:800}
+@media(max-width:800px){
+.feature,.highlight,.bracket-wrap{grid-template-columns:1fr}.feature img{height:320px}.hero{min-height:540px}
+/* Menú visible en celular: se desliza de lado */
+html{scroll-padding-top:110px}
+header{padding:12px 5%}
+.nav{flex-direction:column;align-items:flex-start;gap:8px}
+.logo{font-size:20px}
+nav{display:flex;width:100%;overflow-x:auto;gap:8px;padding-bottom:6px;-webkit-overflow-scrolling:touch;scrollbar-width:none}
+nav::-webkit-scrollbar{display:none}
+nav a{margin-left:0;white-space:nowrap;background:#ffffff22;padding:7px 13px;border-radius:20px;font-size:13px}
+}
+/* Click para ampliar + info extra */
+.gallery a{display:block;overflow:hidden;cursor:zoom-in}
+.gallery figure img,.feature img{transition:transform .4s}
+.gallery figure:hover img{transform:scale(1.07)}
+.feature a{display:block;cursor:zoom-in}
+.lightbox{position:fixed;inset:0;background:#000000ee;display:flex;align-items:center;justify-content:center;opacity:0;pointer-events:none;transition:.25s;z-index:100;padding:30px}
+.lightbox:target{opacity:1;pointer-events:auto}
+.lightbox .lb-bg{position:absolute;inset:0;cursor:zoom-out}
+.lightbox img{position:relative;max-width:92%;max-height:86%;border-radius:12px;box-shadow:0 12px 45px #000;object-fit:contain}
+.lightbox .close{position:absolute;top:18px;right:28px;color:#fff;font-size:42px;text-decoration:none;font-weight:800;line-height:1;z-index:2}
+.lightbox .cap{position:absolute;bottom:24px;left:0;right:0;text-align:center;color:#fff;font-weight:600;padding:0 20px;font-size:15px}
+.more{margin-top:18px;background:#f0f6fd;border:1px solid #d4e4f5;border-radius:12px;padding:2px 18px}
+.more summary{cursor:pointer;font-weight:800;color:#1261a0;padding:14px 0;list-style:none;outline:none}
+.more summary::-webkit-details-marker{display:none}
+.more summary::before{content:'➕  '}
+.more[open] summary::before{content:'➖  '}
+.more p{padding:0 0 16px;color:#334155}
