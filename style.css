@@ -23,6 +23,11 @@ section{padding:65px 8%;max-width:1250px;margin:auto}.title{text-align:center;ma
 .calendar{width:100%;border-collapse:collapse;background:#fff;border-radius:12px;overflow:hidden;box-shadow:0 4px 16px #0001}.calendar th,.calendar td{padding:14px;text-align:left;border-bottom:1px solid #e9eef3}.calendar th{background:#0b477f;color:#fff}
 .highlight{background:#0b1f3a;color:#fff;border-radius:18px;padding:38px;display:grid;grid-template-columns:1fr 1fr;gap:30px;align-items:center}.highlight h2{font-size:35px;margin-bottom:12px}
 .team{text-align:center;background:#eaf3fb;border-radius:16px;padding:35px}footer{background:#071a32;color:#fff;text-align:center;padding:35px 8%}footer strong{color:#ffd23f}
+/* Logo */
+.hero{justify-content:space-between;gap:30px}
+.hero-logo{width:min(400px,36%);height:auto;filter:drop-shadow(0 10px 25px #0008)}
+.logo{display:flex;align-items:center;gap:10px}
+.logo-img{height:42px;width:42px;object-fit:contain}
 /* Resultados / llaves */
 .bracket-wrap{display:grid;grid-template-columns:1fr 1fr;gap:26px}
 .bcol{background:#fff;border-radius:16px;padding:26px;box-shadow:0 6px 22px #17324d16;border-top:6px solid #1261a0}
@@ -44,6 +49,9 @@ section{padding:65px 8%;max-width:1250px;margin:auto}.title{text-align:center;ma
 .feature,.highlight,.bracket-wrap{grid-template-columns:1fr}.feature img{height:320px}.hero{min-height:540px}
 /* Menú visible en celular: se desliza de lado */
 html{scroll-padding-top:110px}
+.hero{flex-direction:column-reverse;justify-content:center;text-align:center;gap:20px}
+.hero-logo{width:210px}
+.logo-img{height:34px;width:34px}
 header{padding:12px 5%}
 .nav{flex-direction:column;align-items:flex-start;gap:8px}
 .logo{font-size:20px}
